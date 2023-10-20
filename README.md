@@ -16,8 +16,14 @@ City of Cincinnati Information Application will help you:
 ## Data Feeds
 
 [City of Cincinnati Salary Schedule - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Employees-w-Salaries/wmj4-ygbf)
+
+
 [City of Cincinnati Department Information - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Department-Information/txnn-6e6x)
+
+
 [City of Cincinnati Employees w/ Salaries - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Salary-Schedule/yaws-h72m)
+
+
 [City of Cincinnati office location - ](https://developers.google.com/maps/documentation/embed/get-started)
 
 
@@ -35,31 +41,30 @@ City of Cincinnati Information Application will help you:
      Assumptions:
         Job Positions and Deparment names are stated in English.
    
-     Examples
+     Examples:
+    
       1.1 
           Given a feed of salary data availabe
           When I search for "Project Manager - Construction"
-
           Then I should recieve at least one result with these attributes:
 
-          Job Position: Project Manager - Construction
-          Department: Civil Constructions
-          Salary Range: $XX,XXX-$XX,XXXX per year
+
+       Job Position: Project Manager - Construction
+       Department: Civil Constructions
+       Salary Range: $XX,XXX-$XX,XXXX per year
 
       1.2 
           Given a feed of salary data availabe
           When I search for "Police Officer"
-
           Then I should recieve at least one result with these attributes:
 
-          Job Position: Police Officer
-          Department: Public Safety Department
-          Salary Range: $XX,XXX-$XX,XXXX per year
+       Job Position: Police Officer
+       Department: Public Safety Department
+       Salary Range: $XX,XXX-$XX,XXXX per year
 
       1.3
           Given a feed of salary data availabe
           When I search for "521 Martin Luther King Street"
-
           Then I should recieve zero results(an empty list)
 
  2. Requirement 101.0: Search for Department Information
@@ -75,32 +80,31 @@ City of Cincinnati Information Application will help you:
         Deparment names are stated in English.
 
      Examples
-       1.1 
+    
+      1.1 
          Given a feed of department data availabe
          When I search for "Public Safety Department"
          Then I should recieve at least one result with these attributes:
 
-         Department Name: Public Safety Department
-         Department Mission: Safe and Secure City of Cincinnati
-         Department Director: Jack Jones 
+       Department Name: Public Safety Department
+       Department Mission: Safe and Secure City of Cincinnati
+       Department Director: Jack Jones 
 
-       1.2 
+      1.2 
          Given a feed of department data availabe
          When I search for "City Planning"
-
          Then I should recieve at least one result with these attributes:
 
-         Department Name: City Planning
-         Department Mission: To utilize creative planning principles, to guide land use while 
-                    ensuring excellent customer service and fostering safe and sustainable 
-                    building development.
-         Department Director: Hrishi Anil
+       Department Name: City Planning
+       Department Mission: To utilize creative planning principles, to guide land use while 
+                           ensuring excellent customer service and fostering safe and sustainable 
+                           building development.
+       Department Director: Hrishi Anil
 
        1.3
          Given a feed of salary data availabe
          When I search for "123 Harris"
-
-        Then I should recieve zero results(an empty list)
+         Then I should recieve zero results(an empty list)
 
  3. Requirement 102.0: Search for Department Office Location
       Scenario:
@@ -114,26 +118,26 @@ City of Cincinnati Information Application will help you:
         Office Location names are stated in English.
 
        Examples
-        1.1 
+    
+       1.1 
          Given a feed of office location data availabe
          When I search for "City of Cincinnati Office"
          Then I should recieve at least one result with these attributes:
 
-         Office Name: City of Cincinnati Police Office
-         Location:    3300 Central Pkwy, Cincinnati, OH 45220  
+       Office Name: City of Cincinnati Police Office
+       Location:    3300 Central Pkwy, Cincinnati, OH 45220  
 
-         1.2 
+       1.2 
          Given a feed of office location data availabe
          When I search for "Cincinnati Health Department"
          Then I should recieve at least one result with these attributes:
 
-         Office Name: Cincinnati Health Department
-         Location:    3101 Burnet Ave, Cincinnati, OH 45229 
+       Office Name: Cincinnati Health Department
+       Location:    3101 Burnet Ave, Cincinnati, OH 45229 
 
-         1.3
+       1.3
          Given a feed of office location data availabe
          When I search for "1234 Bishop street"
-
          Then I should recieve zero results(an empty list)
 
 
