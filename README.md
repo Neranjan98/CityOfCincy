@@ -79,7 +79,7 @@ Deparment names are stated in English.
 
 #### Examples
     
-1.1  
+2.1  
          **Given** a feed of department data availabe  
          **When** I search for "Public Safety Department"  
          **Then** I should recieve at least one result with these attributes:
@@ -88,7 +88,7 @@ Department Name: Public Safety Department
 Department Mission: Safe and Secure City of Cincinnati  
 Department Director: Jack Jones   
 
-1.2  
+2.2  
          **Given** a feed of department data availabe  
          **When** I search for "City Planning"  
          **Then** I should recieve at least one result with these attributes:
@@ -99,7 +99,7 @@ Department Mission: To utilize creative planning principles, to guide land use w
                     building development.  
 Department Director: Hrishi Anil
 
-1.3  
+2.3  
          **Given** a feed of salary data availabe  
          **When** I search for "123 Harris"  
          **Then** I should recieve zero results(an empty list)
@@ -116,7 +116,7 @@ Office Location names are stated in English.
 
 #### Examples
     
-1.1  
+3.1  
          **Given** a feed of office location data availabe  
          **When** I search for "City of Cincinnati Office"  
          **Then** I should recieve at least one result with these attributes:
@@ -124,7 +124,7 @@ Office Location names are stated in English.
 Office Name: City of Cincinnati Police Office  
 Location:    3300 Central Pkwy, Cincinnati, OH 45220   
 
- 1.2  
+3.2  
          **Given** a feed of office location data availabe  
          **When** I search for "Cincinnati Health Department"  
          **Then** I should recieve at least one result with these attributes:
@@ -132,7 +132,7 @@ Location:    3300 Central Pkwy, Cincinnati, OH 45220
 Office Name: Cincinnati Health Department  
 Location:    3101 Burnet Ave, Cincinnati, OH 45229  
 
-1.3  
+3.3  
          **Given** a feed of office location data availabe  
          **When** I search for "1234 Bishop street"  
          **Then** I should recieve zero results(an empty list)
