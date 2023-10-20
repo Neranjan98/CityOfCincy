@@ -29,114 +29,113 @@ City of Cincinnati Information Application will help you:
 
 
 ## Functional Requirements
-
- 1. Requirement 100.0: Search for Salary range
+### 1. Requirement 100.0: Search for Salary range
     
-     Scenario:
-        As a user interested in salary information, I want to be able to search for salary data based on various criteria, including job position and department names.
+#### Scenario:
+As a user interested in salary information, I want to be able to search for salary data based on various criteria, including job position and department names.
     
-     Dependencies:
-        Salary related data sources are avaiable and accessible.
+#### Dependencies:
+Salary related data sources are avaiable and accessible.
     
-     Assumptions:
-        Job Positions and Deparment names are stated in English.
+#### Assumptions:
+Job Positions and Deparment names are stated in English.
    
-     Examples:
+#### Examples:
     
-      1.1 
-          Given a feed of salary data availabe
-          When I search for "Project Manager - Construction"
-          Then I should recieve at least one result with these attributes:
+1.1  
+          **Given** a feed of salary data availabe  
+          **When** I search for "Project Manager - Construction"  
+          **Then** I should recieve at least one result with these attributes:
 
 
-       Job Position: Project Manager - Construction
-       Department: Civil Constructions
-       Salary Range: $XX,XXX-$XX,XXXX per year
+Job Position: Project Manager - Construction  
+Department: Civil Constructions  
+Salary Range: $XX,XXX-$XX,XXXX per year  
 
-      1.2 
-          Given a feed of salary data availabe
-          When I search for "Police Officer"
-          Then I should recieve at least one result with these attributes:
+ 1.2  
+          **Given** a feed of salary data availabe  
+          **When** I search for "Police Officer"  
+          **Then** I should recieve at least one result with these attributes:
 
-       Job Position: Police Officer
-       Department: Public Safety Department
-       Salary Range: $XX,XXX-$XX,XXXX per year
+Job Position: Police Officer  
+Department: Public Safety Department  
+Salary Range: $XX,XXX-$XX,XXXX per year  
 
-      1.3
-          Given a feed of salary data availabe
-          When I search for "521 Martin Luther King Street"
-          Then I should recieve zero results(an empty list)
+1.3  
+          **Given** a feed of salary data availabe  
+          **When** I search for "521 Martin Luther King Street"  
+          **Then** I should recieve zero results(an empty list)
 
- 2. Requirement 101.0: Search for Department Information
+### 2. Requirement 101.0: Search for Department Information
     
-     Scenario:
-        As a user interested in department related information, I want to be able to search for department data based on various criteria, department names and department office location.
+#### Scenario:
+As a user interested in department related information, I want to be able to search for department data based on various criteria, department names and department office location.
     
-     Dependencies:
-        Department related data sources are avaiable and accessible.
+#### Dependencies:
+Department related data sources are avaiable and accessible.
     
-     Assumptions:
-        Deparment names are stated in English.
+#### Assumptions:
+Deparment names are stated in English.
 
-     Examples
+#### Examples
     
-      1.1 
-         Given a feed of department data availabe
-         When I search for "Public Safety Department"
-         Then I should recieve at least one result with these attributes:
+1.1  
+         **Given** a feed of department data availabe  
+         **When** I search for "Public Safety Department"  
+         **Then** I should recieve at least one result with these attributes:
 
-       Department Name: Public Safety Department
-       Department Mission: Safe and Secure City of Cincinnati
-       Department Director: Jack Jones 
+Department Name: Public Safety Department  
+Department Mission: Safe and Secure City of Cincinnati  
+Department Director: Jack Jones   
 
-      1.2 
-         Given a feed of department data availabe
-         When I search for "City Planning"
-         Then I should recieve at least one result with these attributes:
+1.2  
+         **Given** a feed of department data availabe  
+         **When** I search for "City Planning"  
+         **Then** I should recieve at least one result with these attributes:
 
-       Department Name: City Planning
-       Department Mission: To utilize creative planning principles, to guide land use while 
-                           ensuring excellent customer service and fostering safe and sustainable 
-                           building development.
-       Department Director: Hrishi Anil
+Department Name: City Planning  
+Department Mission: To utilize creative planning principles, to guide land use while   
+                    ensuring excellent customer service and fostering safe and sustainable 
+                    building development.  
+Department Director: Hrishi Anil
 
-       1.3
-         Given a feed of salary data availabe
-         When I search for "123 Harris"
-         Then I should recieve zero results(an empty list)
+1.3  
+         **Given** a feed of salary data availabe  
+         **When** I search for "123 Harris"  
+         **Then** I should recieve zero results(an empty list)
 
- 3. Requirement 102.0: Search for Department Office Location
-      Scenario:
-        As a user interested in office location information, I want to be able to search for location data based on various criteria, including Office and Department Names.
+### 3. Requirement 102.0: Search for Department Office Location
+#### Scenario:
+As a user interested in office location information, I want to be able to search for location data based on various criteria, including Office and Department Names.
     
-       Dependencies:
-        Office location related data sources are avaiable and accessible.
+#### Dependencies:
+Office location related data sources are avaiable and accessible.
     
-       Assumptions
-        Office Location names are stated in English.
+#### Assumptions
+Office Location names are stated in English.
 
-       Examples
+#### Examples
     
-       1.1 
-         Given a feed of office location data availabe
-         When I search for "City of Cincinnati Office"
-         Then I should recieve at least one result with these attributes:
+1.1  
+         **Given** a feed of office location data availabe  
+         **When** I search for "City of Cincinnati Office"  
+         **Then** I should recieve at least one result with these attributes:
 
-       Office Name: City of Cincinnati Police Office
-       Location:    3300 Central Pkwy, Cincinnati, OH 45220  
+Office Name: City of Cincinnati Police Office  
+Location:    3300 Central Pkwy, Cincinnati, OH 45220   
 
-       1.2 
-         Given a feed of office location data availabe
-         When I search for "Cincinnati Health Department"
-         Then I should recieve at least one result with these attributes:
+ 1.2  
+         **Given** a feed of office location data availabe  
+         **When** I search for "Cincinnati Health Department"  
+         **Then** I should recieve at least one result with these attributes:
 
-       Office Name: Cincinnati Health Department
-       Location:    3101 Burnet Ave, Cincinnati, OH 45229 
+Office Name: Cincinnati Health Department  
+Location:    3101 Burnet Ave, Cincinnati, OH 45229  
 
-       1.3
-         Given a feed of office location data availabe
-         When I search for "1234 Bishop street"
-         Then I should recieve zero results(an empty list)
+1.3  
+         **Given** a feed of office location data availabe  
+         **When** I search for "1234 Bishop street"  
+         **Then** I should recieve zero results(an empty list)
 
 
 ## Team Members
