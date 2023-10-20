@@ -2,7 +2,6 @@
 
 ---
 
-# Logo
 ![image](https://github.com/Neranjan98/Bookstore/assets/143024478/630702d5-566a-4ca7-8343-108f901a31d1)
 
 
