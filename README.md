@@ -19,13 +19,13 @@ City of Cincinnati Information Application will help you:
 
 ## Data Feeds
 
-[City of Cincinnati Salary Schedule - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Employees-w-Salaries/wmj4-ygbf)
+[City of Cincinnati Salary Schedule - ](https://data.cincinnati-oh.gov/resource/wmj4-ygbf.json)
 
 
-[City of Cincinnati Department Information - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Department-Information/txnn-6e6x)
+[City of Cincinnati Department Information - ](https://data.cincinnati-oh.gov/resource/txnn-6e6x.json)
 
 
-[City of Cincinnati Employees w/ Salaries - ](https://data.cincinnati-oh.gov/Efficient-Service-Delivery/City-of-Cincinnati-Salary-Schedule/yaws-h72m)
+[City of Cincinnati Employees w/ Salaries - ](https://data.cincinnati-oh.gov/resource/yaws-h72m.json)
 
 
 [City of Cincinnati office location - ](https://developers.google.com/maps/documentation/embed/get-started)
@@ -154,11 +154,11 @@ Location:    3101 Burnet Ave, Cincinnati, OH 45229
 
 ## Scrum Roles 
 
-Product Owner:         Bandhavi Aakasapu
-Scrum Master:          Sweta	Pandya
-Frontend Developer:    Ramvyasa Thavasiraj
-Backend Developer:     Neranjan Ramakrishnan Sugumar
-Business Analyst:      Hrishikesh Anil Patil
+- Product Owner:         Bandhavi Aakasapu
+- Scrum Master:          Sweta	Pandya
+- Frontend Developer:    Ramvyasa Thavasiraj
+- Backend Developer:     Neranjan Ramakrishnan Sugumar
+- Business Analyst:      Hrishikesh Anil Patil
 
 ##  Weekly Meeting
 
