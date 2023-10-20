@@ -31,9 +31,9 @@ City of Cincinnati Information Application will help you:
 ## Functional Requirements
 
  1. Requirement 100.0: Search for Salary range
+    
      Scenario:
-        As a user interested in salary information, I want to be able to search for salary data     
-        based on various criteria, including job position and department names.
+        As a user interested in salary information, I want to be able to search for salary data based on various criteria, including job position and department names.
     
      Dependencies:
         Salary related data sources are avaiable and accessible.
@@ -68,10 +68,9 @@ City of Cincinnati Information Application will help you:
           Then I should recieve zero results(an empty list)
 
  2. Requirement 101.0: Search for Department Information
+    
      Scenario:
-        As a user interested in department related information, I want to be able to search for   
-        department data based on various criteria, including department names and department 
-        office location.
+        As a user interested in department related information, I want to be able to search for department data based on various criteria, department names and department office location.
     
      Dependencies:
         Department related data sources are avaiable and accessible.
@@ -108,8 +107,7 @@ City of Cincinnati Information Application will help you:
 
  3. Requirement 102.0: Search for Department Office Location
       Scenario:
-        As a user interested in office location information, I want to be able to search for     
-        location data based on various criteria, including Office and Department Names.
+        As a user interested in office location information, I want to be able to search for location data based on various criteria, including Office and Department Names.
     
        Dependencies:
         Office location related data sources are avaiable and accessible.
