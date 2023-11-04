@@ -1,8 +1,11 @@
+using CityOfCincy.Utilities;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-
+builder.Services.AddSingleton<ConfigurationSettingResolver>();
+builder.Services.AddSingleton<IDataResolver, APIDataResolver>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

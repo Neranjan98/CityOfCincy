@@ -1,0 +1,16 @@
+﻿@page
+@using CityOfCincy.Models;
+@model CityOfCincy.Pages.DepartmentDetailModel
+@{
+    var DepartmentData = (DepartmentInfoResponse)ViewData["departmentInfo"];
+    var SalaryData = (List<EmployeeSalaryResponse>)ViewData["salaryInfo"];
+}
+
+Department - @DepartmentData.department <br />
+Average Salary - @SalaryData.FirstOrDefault().annual_rt<br />
+Positions - @SalaryData.Count()<br />
+Role - @SalaryData.FirstOrDefault().business_title <br />
+
+
+
+

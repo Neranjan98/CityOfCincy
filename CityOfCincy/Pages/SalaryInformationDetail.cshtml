@@ -1,0 +1,35 @@
+﻿@page
+@using CityOfCincy.Models;
+@model CityOfCincy.Pages.SalaryInformationDetailModel
+@{
+    ViewData["Title"] = "Individual Salary Information";
+    List<EmployeeSalaryResponse> employeeSalaryResponse = (List<EmployeeSalaryResponse>)ViewData["individualSalaryResult"];
+}
+
+<div class="table">
+    <div class="table-header">
+        <div class="header__item">Name</div>
+        <div class="header__item">Department</div>
+        <div class="header__item">Hours Per Week</div>
+        <div class="header__item">Average Salary</div>
+    </div>
+    <div class="table-content">
+
+        @{
+            foreach (var empSalary in employeeSalaryResponse)
+            {
+                if (empSalary is not null)
+                {
+
+                    <div class="table-row">
+                        <div class="table-data">@empSalary.name</div>
+                        <div class="table-data">@empSalary.deptname</div>
+                        <div class="table-data">@empSalary.std_hours</div>
+                        <div class="table-data">@empSalary.jobtitle_abbrv</div>
+                    </div>
+                }
+            }
+        }
+
+    </div>
+</div>
