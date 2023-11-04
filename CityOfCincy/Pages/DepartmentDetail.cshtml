@@ -2,6 +2,7 @@
 @using CityOfCincy.Models;
 @model CityOfCincy.Pages.DepartmentDetailModel
 @{
+    ViewData["Title"] = "Department Information";
     var DepartmentData = (DepartmentInfoResponse)ViewData["departmentInfo"];
     var SalaryData = (List<EmployeeSalaryResponse>)ViewData["salaryInfo"];
 }
