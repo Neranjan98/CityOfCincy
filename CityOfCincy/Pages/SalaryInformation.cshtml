@@ -7,7 +7,23 @@
     List<EmployeeSalaryResponse> employeeSalaryResponse = (List<EmployeeSalaryResponse>)ViewData["salaryResult"];
     var groupedResult = employeeSalaryResponse.GroupBy(x => x.deptname);
 }
+<style>
 
+    .card-body {
+        background: #BA68C8;
+        border-radius: 10px;
+    }
+
+    a {
+        color: white;
+    }
+
+    a:hover {
+            color: white;
+    }
+
+
+</style>
 <div style="overflow-y:hidden;">
     <div class="left">
 
