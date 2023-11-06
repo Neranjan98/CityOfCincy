@@ -8,6 +8,79 @@
     var groupedResult = employeeSalaryResponse.GroupBy(x => x.deptname);
 }
 <style>
+    #col-1 {
+        position: relative;
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #ffff;
+        z-index: 1010101010;
+    }
+
+    #col-2 {
+        position: relative;
+        width: 50%;
+        float: left;
+        height: 100%;
+        background-color: #ffff;
+        z-index: 1010101010;
+    }
+
+    .table {
+        width: 100%;
+        border: 1px solid #EEEEEE;
+    }
+
+    .table-header {
+        display: flex;
+        width: 100%;
+        background: #BA68C8;
+        padding: 18px 0;
+    }
+
+    .table-row {
+        display: flex;
+        width: 100%;
+        padding: 18px 0;
+        border: 1px solid black;
+    }
+
+    .table-data, .header__item {
+        flex: 1 1 20%;
+        text-align: center;
+    }
+
+    .header__item {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .filter__link {
+        color: white;
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+        .filter__link::after {
+            content: '';
+            position: absolute;
+            right: -18px;
+            color: white;
+            font-size: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .filter__link.desc::after {
+            content: '(desc)';
+        }
+
+        .filter__link.asc::after {
+            content: '(asc)';
+        }
 
     .card-body {
         background: #BA68C8;
@@ -18,33 +91,60 @@
         color: white;
     }
 
-    a:hover {
+        a:hover {
             color: white;
+        }
+    h2{
+        color:#BA68C8;
+        font-family:'Candara',cursive;       
     }
 
+    .header__item{
+        color: white;
+        font-family: 'Candara',cursive;
+        font-size:24px;
+    }
 
 </style>
-<div style="overflow-y:hidden;">
-    <div class="left">
-
-        </tr>
-        @{
-            foreach (var item in groupedResult)
-            {
-                <a href="/SalaryInformationDetail?inputDept=@item.FirstOrDefault().deptid">
-                        <div class="card" style="margin-top:6px">
-                            <div class="card-body">
-
-                                @item.Key
-
+<h2><center>Click on department to view salary details</center></h2>
+<div id="col-1">
+    <div class="table">
+        <div class="table-header">
+            <div class="header__item">Departments</div>
+        </div>
+        <div class="table-content">
+            <div style="overflow-y: hidden;">
+                <div class="left">
+                    @foreach (var item in groupedResult)
+                    {
+                        <a href="/SalaryInformationDetail?inputDept=@item.FirstOrDefault().deptid">
+                            <div class="card" style="margin-top:6px">
+                                <div class="card-body">
+                                    @item.Key
+                                </div>
                             </div>
-
-                        </div>
-                    </a>
-            }
-
-
-
-        }
-
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+
+<!-- Make sure to include your col-2 content here -->
+<div id="col-2">
+    
+    <img width="600x" height="600x" src="~/Images/SalInfoImage1.png" />
+
+    <img width="600x" height="600x" src="~/Images/SalInfoImage2.png" />
+
+    <img width="600x" height="600x" src="~/Images/SalInfoImage3.png" />
+
+    <!-- Your col-2 content here -->
+</div>
+</div>
+
+
+
+
+
