@@ -6,21 +6,44 @@
     var DepartmentData = (DepartmentInfoResponse)ViewData["departmentInfo"];
     var SalaryData = (List<EmployeeSalaryResponse>)ViewData["salaryInfo"];
 }
+    
+<div class="card" align="left" style="width: 20rem;">
+    <div class="card-header">
+        <strong>Department - @DepartmentData.department</strong>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Average Salary - @SalaryData.FirstOrDefault().annual_rt</li>
+        <li class="list-group-item">Positions - @SalaryData.Count()</li>
+        <li class="list-group-item">Role - @SalaryData.FirstOrDefault().business_title</li>
+    </ul>
+</div>
 
-Department - @DepartmentData.department <br />
-Average Salary - @SalaryData.FirstOrDefault().annual_rt<br />
-Positions - @SalaryData.Count()<br />
-Role - @SalaryData.FirstOrDefault().business_title <br />
 
-<iframe width="600"
-     height="450"
-     style="border:0"
-     loading="lazy"
-     allowfullscreen
-     referrerpolicy="no-referrer-when-downgrade"
-     src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDIBbwr7lNOtzjHJ0DUINJBEIDWN0a2OYc &q= City+Manager ,City+of+Cincinnati+OH">
- </iframe>
+<br />
+<br />
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm text-center">
+            <button type="button" align="left" class="btn btn-secondary">
+                Maps and Navigation
+            </button>
+            <br />
+            <br />
+            <iframe width="500"
+                    height="350"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    referrerpolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDIBbwr7lNOtzjHJ0DUINJBEIDWN0a2OYc &q= City+Manager ,City+of+Cincinnati+OH">
+            </iframe>
+
+        </div>
+
+       
+    </div>
+</div>
 
 
 
