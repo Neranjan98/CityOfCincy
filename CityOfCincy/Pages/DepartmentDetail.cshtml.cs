@@ -17,10 +17,17 @@ namespace CityOfCincy.Pages
             var department = await _dataResolver.GetIndividualCincinnatiDepartmentInfo(stringName);
             var salaryInfo = await _dataResolver.GetSalaryDataWithQueryParemeter("jobcode", inputDept);
 
-            if(salaryInfo is not null && department is not null) 
+            try
             {
-                ViewData["salaryInfo"] = salaryInfo;
-                ViewData["departmentInfo"] = department.FirstOrDefault();
+                if (salaryInfo is not null && department is not null)
+                {
+                    ViewData["salaryInfo"] = salaryInfo;
+                    ViewData["departmentInfo"] = department.FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                ViewData["ErrorMessage"] = "An error occurred while processing your request.";
             }
 
 
