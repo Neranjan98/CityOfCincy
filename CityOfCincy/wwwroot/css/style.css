@@ -1,0 +1,215 @@
+﻿button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.heading {
+    font-family: 'Candara', cursive;
+    margin-top: 10%;
+    font-size: 60px;
+    color: #BA68C8;
+}
+
+.subheading {
+    font-family: 'Candara',cursive;
+}
+
+.searchbtn {
+    color: white;
+    background: #BA68C8;
+    height: 41px;
+    /* left: 50%; */
+    top: 67%;
+    position: absolute;
+    width: 315px;
+    border-radius: 12px;
+    font-family: 'Candara',cursive;
+    font-size: 25px;
+    border: 0px
+}
+
+.aboutus {
+    margin-top: 80px;
+    font-family: 'Candara', cursive;
+}
+
+.profile-card-3 {
+    font-family: 'Candara',cursive;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    height: 368px;
+    border: none;
+}
+
+    .profile-card-3 .background-block {
+        float: left;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        font-family: 'Candara',cursive;
+    }
+
+        .profile-card-3 .background-block .background {
+            width: 100%;
+            vertical-align: top;
+            opacity: 0.9;
+            -webkit-filter: blur(0.5px);
+            filter: blur(0.5px);
+            -webkit-transform: scale(1.8);
+            transform: scale(2.8);
+            font-family: 'Candara',cursive;
+        }
+
+    .profile-card-3 .card-content {
+        width: 100%;
+        padding: 15px 25px;
+        color: #232323;
+        float: left;
+        background: #efefef;
+        height: 50%;
+        border-radius: 0 0 5px 5px;
+        position: relative;
+        z-index: 9999;
+        font-family: 'Candara',cursive;
+    }
+
+        .profile-card-3 .card-content::before {
+            content: '';
+            background: #efefef;
+            width: 120%;
+            height: 100%;
+            left: 11px;
+            bottom: 51px;
+            position: absolute;
+            z-index: -1;
+            transform: rotate(-13deg);
+            font-family: 'Candara',cursive;
+        }
+
+    .profile-card-3 .profile {
+        border-radius: 50%;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        max-width: 100px;
+        opacity: 1;
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 1);
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        font-family: 'Candara',cursive;
+        z-index: 99999;
+    }
+
+    .profile-card-3 h2 {
+        margin: 0 0 5px;
+        font-weight: 600;
+        font-size: 25px;
+        font-family: 'Candara',cursive;
+    }
+
+        .profile-card-3 h2 small {
+            display: block;
+            font-size: 15px;
+            margin-top: 10px;
+            font-family: 'Candara',cursive;
+        }
+
+    .profile-card-3 i {
+        display: inline-block;
+        font-size: 16px;
+        color: #232323;
+        text-align: center;
+        border: 1px solid #232323;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        margin: 0 5px;
+        font-family: 'Candara',cursive;
+    }
+
+    .profile-card-3 .icon-block {
+        float: left;
+        width: 100%;
+        margin-top: 15px;
+        font-family: 'Candara',cursive;
+    }
+
+        .profile-card-3 .icon-block a {
+            text-decoration: none;
+            font-family: 'Candara',cursive;
+        }
+
+    .profile-card-3 i:hover {
+        background-color: #232323;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Candara',cursive;
+    }
+
+.smallheadings {
+    margin-left: 40%;
+    color: #BA68C8;
+    margin-bottom: 50px;
+    font-family: 'Candara', cursive;
+}
+
+.button-8 {
+    background-color: #e1ecf4;
+    border-radius: 3px;
+    border: 1px solid #7aa7c7;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #39739d;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+    .button-8:hover,
+    .button-8:focus {
+        background-color: #b3d3ea;
+        color: #2c5777;
+    }
+
+    .button-8:focus {
+        box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+    }
+
+    .button-8:active {
+        background-color: #a0c7e4;
+        box-shadow: none;
+        color: #2c5777;
+    }
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+
+.final {
+    display: flex;
+    margin-left: 32%;
+}
+
+.link {
+    margin-top: -10px
+}
+}
