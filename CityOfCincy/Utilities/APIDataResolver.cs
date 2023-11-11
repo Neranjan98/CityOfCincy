@@ -1,4 +1,7 @@
-﻿using CityOfCincy.Models;
+﻿// Added text error logging
+
+
+using CityOfCincy.Models;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -13,19 +16,44 @@ namespace CityOfCincy.Utilities
             _configurationSettingResolver = configurationSettingResolver;
         }
 
+        private async Task LogErrorAsync(string errorMessage)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("error_log.txt", true))
+                {
+                    await writer.WriteLineAsync($"{DateTime.Now} - {errorMessage}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions during logging. You may want to log this to another source.
+                Console.WriteLine($"Error logging failed: {ex.Message}");
+            }
+        }
+
         public async Task<List<EmployeeSalaryResponse>?> GetCincinnatiSalaryInfo()
         {
-            string CincinnatiSalaryURL = _configurationSettingResolver.GetCincinnatiSalaryURL();
-            var SalaryRequest = new RestRequest(CincinnatiSalaryURL);
-            var SalaryDataString = await APIRequestHandler.MakeGETRestRequest(SalaryRequest);
+            try
+            {
+                string CincinnatiSalaryURL = _configurationSettingResolver.GetCincinnatiSalaryURL();
+                var SalaryRequest = new RestRequest(CincinnatiSalaryURL);
+                var SalaryDataString = await APIRequestHandler.MakeGETRestRequest(SalaryRequest);
 
-            if(!String.IsNullOrWhiteSpace(SalaryDataString)) 
-            {
-                return JsonConvert.DeserializeObject<List<EmployeeSalaryResponse>>(SalaryDataString);
+                if (!String.IsNullOrWhiteSpace(SalaryDataString))
+                {
+                    return JsonConvert.DeserializeObject<List<EmployeeSalaryResponse>>(SalaryDataString);
+                }
+                else
+                {
+                    await LogErrorAsync("Empty or null response from GetCincinnatiSalaryInfo API.");
+                    return null;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return null;
+                await LogErrorAsync($"Error in GetCincinnatiSalaryInfo: {ex.Message}");
+                throw; // Re-throw the exception after logging.
             }
 
         }
