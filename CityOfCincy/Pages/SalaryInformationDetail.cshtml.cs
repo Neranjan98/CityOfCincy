@@ -1,3 +1,4 @@
+using CityOfCincy.Models;
 using CityOfCincy.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -19,5 +20,9 @@ namespace CityOfCincy.Pages
             ViewData["individualSalaryResult"] = salaryData;
 
         }
+
     }
+
 }
+
+
