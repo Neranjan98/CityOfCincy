@@ -11,11 +11,20 @@
     <div class="card-header">
         <strong>Department - @(DepartmentData?.department)</strong>
     </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Average Salary - @(SalaryData?.FirstOrDefault()?.annual_rt)</li>
-        <li class="list-group-item">Positions - @(SalaryData?.Count() ?? 0)</li>
-        <li class="list-group-item">Role - @(SalaryData?.FirstOrDefault()?.business_title)</li>
-    </ul>
+    @if (SalaryData != null && SalaryData.Any())
+    {
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Average Salary - @(SalaryData.FirstOrDefault()?.annual_rt)</li>
+            <li class="list-group-item">Positions - @(SalaryData.Count())</li>
+            <li class="list-group-item">Role - @(SalaryData.FirstOrDefault()?.business_title)</li>
+        </ul>
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            No Vacancy Available.
+        </div>
+    }
 </div>
 
 <br />
@@ -35,10 +44,8 @@
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key= AIzaSyDIBbwr7lNOtzjHJ0DUINJBEIDWN0a2OYc &q= @DepartmentData.department ,Cincinnati+OH">
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDIBbwr7lNOtzjHJ0DUINJBEIDWN0a2OYc&q=@DepartmentData.department,Cincinnati+OH">
             </iframe>
-
         </div>
-
     </div>
 </div>
