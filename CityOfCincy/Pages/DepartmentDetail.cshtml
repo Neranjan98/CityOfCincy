@@ -5,6 +5,7 @@
     ViewData["Title"] = "Department Information";
     var DepartmentData = (DepartmentInfoResponse)ViewData["departmentInfo"];
     var SalaryData = (List<EmployeeSalaryResponse>)ViewData["salaryInfo"];
+    var MapsAPIKey = (string)ViewData["MapsKey"];
 }
 
 <div class="card" align="left" style="width: 20rem;">
@@ -44,7 +45,7 @@
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDIBbwr7lNOtzjHJ0DUINJBEIDWN0a2OYc&q=@DepartmentData.department,Cincinnati+OH">
+                    src="https://www.google.com/maps/embed/v1/place?key=@MapsAPIKey&q=@DepartmentData.department,Cincinnati+OH">
             </iframe>
         </div>
     </div>

@@ -21,5 +21,10 @@
         {
             return _configuration["CincinnatiDataURLs:CincinnatiDepartmentURL"];
         }
+        public string GetAccessKey(string Key)
+        {
+            var searchString = "AccessKeys:" + Key;
+            return _configuration[searchString];
+        }
     }
 }
