@@ -26,5 +26,9 @@
             var searchString = "AccessKeys:" + Key;
             return _configuration[searchString];
         }
+        public string GetConfiguration(string Configuration)
+        {
+            return _configuration[Configuration];
+        }
     }
 }

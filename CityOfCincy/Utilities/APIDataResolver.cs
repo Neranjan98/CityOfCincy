@@ -99,6 +99,40 @@ namespace CityOfCincy.Utilities
             }
 
         }
+        
+        public async Task<List<ChicagoHousingResponse>>? GetChicagoData()
+        {
+            string ChicagoDataURL = _configurationSettingResolver.GetConfiguration("ChicagoDataURL:CityOwnedLandURL");
+            var ChicagoDataRequest = new RestRequest(ChicagoDataURL);
+            var ChicagoDataResponse = await APIRequestHandler.MakeGETRestRequest(ChicagoDataRequest);
+
+            if (!String.IsNullOrWhiteSpace(ChicagoDataResponse))
+            {
+                return JsonConvert.DeserializeObject<List<ChicagoHousingResponse>>(ChicagoDataResponse);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+        public async Task<List<ChicagoHousingResponse>>? GetChicagoDataBySalesStatus(string SalesStatus)
+        {
+            string ChicagoDataURL = _configurationSettingResolver.GetConfiguration("ChicagoDataURL:CityOwnedLandURL");
+            string enhancedURL = ChicagoDataURL + "?sales_status=" + SalesStatus;
+            var ChicagoDataRequest = new RestRequest(enhancedURL);
+            var ChicagoDataResponse = await APIRequestHandler.MakeGETRestRequest(ChicagoDataRequest);
+
+            if (!String.IsNullOrWhiteSpace(ChicagoDataResponse))
+            {
+                return JsonConvert.DeserializeObject<List<ChicagoHousingResponse>>(ChicagoDataResponse);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
 
     }
 }

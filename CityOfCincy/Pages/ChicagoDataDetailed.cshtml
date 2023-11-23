@@ -1,0 +1,16 @@
+﻿ @page
+@using CityOfCincy.Models;
+@model CityOfCincy.Pages.ChicagoDataDetailedModel
+@{
+
+    ViewData["Title"] = (string)ViewData["Status"] + " Result";
+
+    var SearchData = (List<ChicagoHousingResponse>)ViewData["ChicagoSearchData"];
+}
+
+<div class="left">
+    @foreach (var item in SearchData)
+    {
+        <p>@item.address</p>
+    }
+</div>

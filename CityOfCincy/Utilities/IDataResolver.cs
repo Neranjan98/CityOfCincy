@@ -9,5 +9,7 @@ namespace CityOfCincy.Utilities
         Task<List<EmployeeSalaryScheduleResponse>?> GetCincinnatiSalaryScheduleInfo();
         Task<List<DepartmentInfoResponse>?> GetCincinnatiDepartmentInfo();
         Task<List<DepartmentInfoResponse>?> GetIndividualCincinnatiDepartmentInfo(string dept_code);
+        Task<List<ChicagoHousingResponse>?> GetChicagoData();
+        Task<List<ChicagoHousingResponse>?> GetChicagoDataBySalesStatus(string SalesStatus);
     }
 }
