@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 
 namespace CityOfCincy.Controller
 {
+    [Produces("application/json")]
     [ApiController]
     [Route("[controller]")]
     public class DataController : ControllerBase
@@ -39,10 +40,10 @@ namespace CityOfCincy.Controller
                                      })
                                .ToList();
 
-                return Ok(JsonConvert.SerializeObject(joinedData));
+                return Ok(joinedData);
             }
 
-            return BadRequest(JsonConvert.SerializeObject("Sorry Some Error Occured"));
+            return BadRequest("Sorry Some Error Occured");
             
         }
 
@@ -52,7 +53,7 @@ namespace CityOfCincy.Controller
 
             if (String.IsNullOrWhiteSpace(DeptName))
             {   
-                return BadRequest(JsonConvert.SerializeObject("Department Name is null"));
+                return BadRequest("Department Name is null");
             }
 
             var department = await _dataResolver.GetCincinnatiDepartmentInfo();
@@ -76,10 +77,10 @@ namespace CityOfCincy.Controller
                                .Where(x => x.Department_Name.Contains(DeptName))
                                .FirstOrDefault();
 
-                return Ok(JsonConvert.SerializeObject(joinedData));
+                return Ok(joinedData);
             }
 
-            return BadRequest(JsonConvert.SerializeObject("Sorry Some Error Occured"));
+            return BadRequest("Sorry Some Error Occured");
 
 
         }
