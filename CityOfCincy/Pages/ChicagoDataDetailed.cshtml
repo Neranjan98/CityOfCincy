@@ -1,4 +1,4 @@
-﻿ @page
+﻿@page
 @using CityOfCincy.Models;
 @model CityOfCincy.Pages.ChicagoDataDetailedModel
 @{
@@ -8,9 +8,26 @@
     var SearchData = (List<ChicagoHousingResponse>)ViewData["ChicagoSearchData"];
 }
 
-<div class="left">
-    @foreach (var item in SearchData)
-    {
-        <p>@item.address</p>
-    }
-</div>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>Managing Organization</th>
+            <th>Square Feet</th>
+            <th>Area Name</th>
+            <th>Pincode</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in SearchData)
+        {
+            <tr>
+                <td>@item.address</td>
+                <td>@item.managing_organization</td>
+                <td>@item.sq_ft</td>
+                <td>@item.community_area_name</td>
+                <td>@item.zip_code</td>
+            </tr>
+        }
+    </tbody>
+</table>
