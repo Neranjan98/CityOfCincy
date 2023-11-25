@@ -8,14 +8,14 @@
     var MapsAPIKey = (string)ViewData["MapsKey"];
 }
 
-<div class="card" align="left" style="width: 20rem;">
+<div class="card" align="left" style="width: 60rem;">
     <div class="card-header">
-        <strong>Department - @(DepartmentData?.department)</strong>
+        <strong align="center">Department - @(DepartmentData?.department)</strong>
     </div>
     @if (SalaryData != null && SalaryData.Any())
     {
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Average Salary - @(SalaryData.FirstOrDefault()?.annual_rt)</li>
+        <ul class="list-group list-group-flush" >
+            <li class="list-group-item" >Average Salary - @(SalaryData.FirstOrDefault()?.annual_rt)</li>
             <li class="list-group-item">Positions - @(SalaryData.Count())</li>
             <li class="list-group-item">Role - @(SalaryData.FirstOrDefault()?.business_title)</li>
         </ul>
@@ -34,9 +34,6 @@
 <div class="container">
     <div class="row">
         <div class="col-sm text-center">
-            <button type="button" align="left" class="btn btn-secondary">
-                Maps and Navigation
-            </button>
             <br />
             <br />
             <iframe width="500"
