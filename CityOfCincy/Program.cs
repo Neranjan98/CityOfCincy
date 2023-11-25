@@ -1,4 +1,5 @@
 using CityOfCincy.Utilities;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,22 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<ConfigurationSettingResolver>();
 builder.Services.AddSingleton<IDataResolver, APIDataResolver>();
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen();
+
+
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "City Of Cincinnati Joined Data",
+        Description = "API for other groups to use",
+        TermsOfService = new Uri("https://support.socrata.com/hc/en-us/articles/360019057154")
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,5 +41,9 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+app.MapControllers();
+app.UseRouting();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
